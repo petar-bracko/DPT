@@ -49,7 +49,7 @@
     <Compile Include="Prototype pattern\IPrototype.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Prototype pattern\TvornicaKlonova.cs" />
+    <Compile Include="Prototype pattern\TvornicaKlonovaSingleton.cs" />
     <Compile Include="Prototype pattern\TvProgram.cs" />
   </ItemGroup>
   <ItemGroup>

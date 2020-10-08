@@ -11,7 +11,7 @@ namespace pbracko_zadaca_2
         {
             Console.WriteLine("Hello World!");
 
-            TvornicaKlonova tvornicaPrograma = TvornicaKlonova.GetInstance();
+            TvornicaKlonovaSingleton tvornicaPrograma = TvornicaKlonovaSingleton.GetInstance();
             List<TvProgram> listaPrograma = new List<TvProgram>();
 
             string exePutanja = AppDomain.CurrentDomain.BaseDirectory;
@@ -61,13 +61,25 @@ namespace pbracko_zadaca_2
 
             listaPrograma[1].Naziv = "DomaTV";
             listaPrograma[1].Adresa.Ulica = "Trg slobode";
-            listaPrograma[1].Adresa.Broj = 7;
+            listaPrograma[1].Adresa.Broj = 8;
             Console.WriteLine("Pormjena--------------");
             foreach (TvProgram program in listaPrograma)
             {
                 Console.WriteLine("Program ID: " + program.Id.ToString() + " | Naziv programa: " + program.Naziv + ".");
                 Console.WriteLine("Adresa: " + program.Adresa.Ulica + " " + program.Adresa.Broj.ToString());
                 Console.WriteLine("-----");
+            }
+
+            int indexArgumenta = 0;
+            foreach (var argument in args)
+            {
+                if (argument.Equals("-x"))
+                {
+                    Console.WriteLine("Pronađen arugment x");
+                    Console.WriteLine("Indeks argumenta x: " + indexArgumenta);
+                    Console.WriteLine("Putanja do datoteke X nalazi se na: " + args[indexArgumenta + 1]);
+                }
+                indexArgumenta++;
             }
 
             Console.ReadLine();

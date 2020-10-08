@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace pbracko_zadaca_2
 {
-    public class TvornicaKlonova
+    public class TvornicaKlonovaSingleton
     {
-        private static TvornicaKlonova _instacnaTvorniceKlonova = null;
+        private static TvornicaKlonovaSingleton _instacnaTvorniceKlonova = null;
 
-        public static TvornicaKlonova GetInstance()
+        public static TvornicaKlonovaSingleton GetInstance()
         {
             if (_instacnaTvorniceKlonova == null)
             {
-                _instacnaTvorniceKlonova = new TvornicaKlonova();
+                _instacnaTvorniceKlonova = new TvornicaKlonovaSingleton();
             }
             return _instacnaTvorniceKlonova;
         }
