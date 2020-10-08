@@ -19,6 +19,7 @@ namespace pbracko_zadaca_2
 
             String solutionDir = Directory.GetParent(exePutanja).Parent.Parent.FullName;
             Console.WriteLine("Solution directory: " + solutionDir);
+            Console.WriteLine("ovo je testni zapis");
 
             string x = Path.Combine(exePutanja, "Programi.txt");
             if (!File.Exists(x))
